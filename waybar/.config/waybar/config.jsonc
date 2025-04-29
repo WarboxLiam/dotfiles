@@ -1,8 +1,8 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 42,
     "spacing": 4,
+    "reload_style_on_change": true,
     // Left Modules
     "modules-left": [
         "hyprland/workspaces"
@@ -14,15 +14,29 @@
     // Right Modules
     "modules-right": [
         "network",
-        "cpu",
-        "memory",
+        // "cpu",
+        // "memory",
         "pulseaudio",
         "battery",
         "clock",
         "tray"
     ],
     // Module configuration
-    "hyprland/workspaces": {},
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": "",
+            "empty": ""
+        },
+        "persistent-workspaces": {
+            "*": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
     "network": {
         "format-wifi": "{essid} 󰤨 ",
         "format-disconnected": "Disconnected"
