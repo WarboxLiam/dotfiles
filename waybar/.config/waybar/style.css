@@ -1,0 +1,62 @@
+@import "mocha.css";
+
+/* oft-font-awesome is required for icons */
+* {
+  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+window#waybar {
+  background-color: alpha(@base, 0.9);
+  color: @text;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+/* Module configuration */
+
+/* Default margin/padding for modules */
+#network,
+#cpu,
+#memory,
+#pulseaudio,
+#battery,
+#clock,
+#tray {
+  padding: 0 5px;
+}
+
+/* Workspaces */
+#workspaces button {
+  color: @surface2;
+  transition: color 0.2s ease-in-out;
+  border-radius: 100%;
+}
+
+#workspaces button:hover,
+#workspaces button.active {
+  color: @blue;
+  background: alpha(@crust, 0.6);
+}
+
+/* Modules */
+.modules-left,
+.modules-right {
+  background: alpha(@crust, 0.6);
+  margin: 10px 0px 10px 0px;
+  border-radius: 20px;
+}
+
+/* Modules Left */
+.modules-left {
+  margin-left: 8px;
+}
+
+/* Modules Right */
+.modules-right {
+  margin-right: 8px;
+  border-radius: 20px;
+  padding: 8px;
+  background: alpha(@crust, 0.6);
+}

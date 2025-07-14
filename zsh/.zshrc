@@ -1,5 +1,5 @@
 # Source our plugin manager (antidote)
-source ~/.antidote/antidote.zsh
+source /usr/share/zsh-antidote/antidote.zsh 
 
 # Initialize plugins statically with .zsh_plugins.txt
 antidote load
