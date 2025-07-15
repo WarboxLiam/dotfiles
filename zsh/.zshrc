@@ -5,6 +5,7 @@ source /usr/share/zsh-antidote/antidote.zsh
 antidote load
 
 eval "$(starship init zsh)"
+eval "$(keychain --eval --quiet)"
 
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
