@@ -1,71 +1,73 @@
 {
-    "layer": "top",
-    "position": "top",
-    "spacing": 4,
-    "reload_style_on_change": true,
-    // Left Modules
-    "modules-left": [
-        "hyprland/workspaces"
-    ],
-    // Center Modules
-    "modules-center": [
-        "hyprland/window"
-    ],
-    // Right Modules
-    "modules-right": [
-        "network",
-        // "cpu",
-        // "memory",
-        "pulseaudio",
-        "battery",
-        "clock",
-        "tray"
-    ],
-    // Module configuration
-    "hyprland/workspaces": {
-        "format": "{icon}",
-        "format-icons": {
-            "active": "",
-            "default": "",
-            "empty": ""
-        },
-        "persistent-workspaces": {
-            "*": [
-                1,
-                2,
-                3
-            ]
-        }
-    },
-    "network": {
-        "format-wifi": "{essid} 󰤨 ",
-        "format-disconnected": "Disconnected"
-    },
-    "cpu": {
-        "format": "CPU: {usage}%"
-    },
-    "memory": {
-        "format": "RAM: {used} / {total}"
-    },
-    "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-muted": "󰝟",
-        "format-icons": {
-            "default": [
-                "󰕿",
-                "󰖀",
-                "󰕾"
-            ]
-        }
-    },
-    "battery": {
-        "format": "{icon} {capacity}%",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
-    }
+	"layer": "top",
+	"position": "top",
+	"spacing": 4,
+	"reload_style_on_change": true,
+	// Left Modules
+	"modules-left": [
+		"hyprland/workspaces"
+	],
+	// Center Modules
+	"modules-center": [
+		"hyprland/window"
+	],
+	// Right Modules
+	"modules-right": [
+		"network",
+		// "cpu",
+		// "memory",
+		"pulseaudio",
+		"battery",
+		"clock",
+		"tray"
+	],
+	// Module configuration
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"active": "",
+			"default": "",
+			"empty": ""
+		},
+		"persistent-workspaces": {
+			"*": [
+				1,
+				2,
+				3,
+				4,
+				5
+			]
+		}
+	},
+	"network": {
+		"format-wifi": "{essid} 󰤨 ",
+		"format-disconnected": "Disconnected"
+	},
+	"cpu": {
+		"format": "CPU: {usage}%"
+	},
+	"memory": {
+		"format": "RAM: {used} / {total}"
+	},
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-muted": "󰝟",
+		"format-icons": {
+			"default": [
+				"󰕿",
+				"󰖀",
+				"󰕾"
+			]
+		}
+	},
+	"battery": {
+		"format": "{icon}   {capacity}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	}
 }
