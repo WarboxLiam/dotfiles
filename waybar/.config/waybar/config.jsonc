@@ -5,11 +5,11 @@
 	"reload_style_on_change": true,
 	// Left Modules
 	"modules-left": [
-		"hyprland/workspaces"
+		"bluetooth"
 	],
 	// Center Modules
 	"modules-center": [
-		"hyprland/window"
+		"hyprland/workspaces"
 	],
 	// Right Modules
 	"modules-right": [
@@ -18,10 +18,15 @@
 		// "memory",
 		"pulseaudio",
 		"battery",
-		"clock",
-		"tray"
+		"clock"
 	],
 	// Module configuration
+	"bluetooth": {
+		"format": "󰂯  {status}",
+		"format-disabled": "󰂲  {status}",
+		"format-connected": "󰂱  {status}",
+		"on-click": "blueman-manager &"
+	},
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"format-icons": {
@@ -40,8 +45,9 @@
 		}
 	},
 	"network": {
-		"format-wifi": "{essid} 󰤨 ",
-		"format-disconnected": "Disconnected"
+		"format-wifi": "󰤨   {essid} ",
+		"format-ethernet": "󰈀   {essid}",
+		"format-disconnected": "󰜺   Disconnected"
 	},
 	"cpu": {
 		"format": "CPU: {usage}%"
@@ -61,13 +67,22 @@
 		}
 	},
 	"battery": {
-		"format": "{icon}   {capacity}%",
+		"format": "{icon} {capacity}%",
+		"format-charging": "󰂄 {capacity}%",
 		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
+			"󰁺",
+			"󰁻",
+			"󰁼",
+			"󰁽",
+			"󰁾",
+			"󰁿",
+			"󰂀",
+			"󰂁",
+			"󰂂",
+			"󰁹"
 		]
+	},
+	"clock": {
+		"format": "󱑆  {:%H:%M}"
 	}
 }

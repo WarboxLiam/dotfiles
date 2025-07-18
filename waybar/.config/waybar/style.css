@@ -2,16 +2,16 @@
 
 /* oft-font-awesome is required for icons */
 * {
-  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-  font-weight: bolder;
-  font-size: 12px;
+	font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+	font-weight: bolder;
+	font-size: 20px;
 }
 
 window#waybar {
-  background-color: alpha(@base, 0.9);
-  color: @text;
-  transition-property: background-color;
-  transition-duration: 0.5s;
+	background-color: transparent;
+	color: @text;
+	transition-property: background-color;
+	transition-duration: 0.5s;
 }
 
 /* Module configuration */
@@ -22,41 +22,47 @@ window#waybar {
 #memory,
 #pulseaudio,
 #battery,
-#clock,
-#tray {
-  padding: 0 5px;
+#clock {
+	padding: 0 5px;
 }
 
 /* Workspaces */
+#workspaces * {
+	font-size: 12px;
+}
+
 #workspaces button {
-  color: @surface2;
-  transition: color 0.2s ease-in-out;
-  border-radius: 100%;
+	color: @surface2;
+	transition: color 0.2s ease-in-out;
+	border-radius: 10px;
 }
 
 #workspaces button:hover,
 #workspaces button.active {
-  color: @blue;
-  background: alpha(@crust, 0.6);
+	color: @blue;
+	background: alpha(@crust, 0.6);
 }
 
 /* Modules */
 .modules-left,
+.modules-center,
 .modules-right {
-  background: alpha(@crust, 0.6);
-  margin: 10px 0px 10px 0px;
-  border-radius: 20px;
+	background: alpha(@crust, 0.6);
+	margin: 10px 0px 10px 0px;
+	border-radius: 10px;
 }
 
 /* Modules Left */
 .modules-left {
-  margin-left: 8px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 /* Modules Right */
 .modules-right {
-  margin-right: 8px;
-  border-radius: 20px;
-  padding: 8px;
-  background: alpha(@crust, 0.6);
+	margin-right: 8px;
+	border-radius: 10px;
+	padding: 8px;
+	background: alpha(@crust, 0.6);
 }
