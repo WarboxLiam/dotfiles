@@ -1,3 +1,5 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/home/liam/.zsh/completions:"* ]]; then export FPATH="/home/liam/.zsh/completions:$FPATH"; fi
 # Source our plugin manager (antidote)
 source /usr/share/zsh-antidote/antidote.zsh 
 
@@ -6,6 +8,12 @@ antidote load
 
 eval "$(starship init zsh)"
 eval "$(keychain --eval --quiet)"
+
+# Aliases
+alias grep="grep --color=always"
+alias ls="ls --color=always"
+
+alias glog="git log --oneline --graph --parents --all"
 
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
@@ -24,3 +32,16 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# fnm
+FNM_PATH="/home/liam/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
+
+eval "$(fnm env --use-on-cd --shell zsh)"
+
+. "$HOME/.local/bin/env"
+. "/home/liam/.deno/env"
+export PATH="$HOME/bin:$PATH"

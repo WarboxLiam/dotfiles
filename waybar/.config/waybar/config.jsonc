@@ -5,7 +5,9 @@
 	"reload_style_on_change": true,
 	// Left Modules
 	"modules-left": [
-		"bluetooth"
+		"tray",
+		"bluetooth",
+		"temperature"
 	],
 	// Center Modules
 	"modules-center": [
@@ -21,12 +23,6 @@
 		"clock"
 	],
 	// Module configuration
-	"bluetooth": {
-		"format": "󰂯  {status}",
-		"format-disabled": "󰂲  {status}",
-		"format-connected": "󰂱  {status}",
-		"on-click": "blueman-manager &"
-	},
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"format-icons": {
@@ -43,6 +39,15 @@
 				5
 			]
 		}
+	},
+	"bluetooth": {
+		"format": "󰂯  {status}",
+		"format-disabled": "󰂲  {status}",
+		"format-connected": "󰂱  {status}",
+		"on-click": "blueman-manager &"
+	},
+	"temperature": {
+		"format": "  {temperatureC}°C"
 	},
 	"network": {
 		"format-wifi": "󰤨   {essid} ",

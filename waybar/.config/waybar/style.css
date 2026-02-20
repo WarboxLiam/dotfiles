@@ -4,7 +4,7 @@
 * {
 	font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
 	font-weight: bolder;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 window#waybar {
@@ -15,33 +15,6 @@ window#waybar {
 }
 
 /* Module configuration */
-
-/* Default margin/padding for modules */
-#network,
-#cpu,
-#memory,
-#pulseaudio,
-#battery,
-#clock {
-	padding: 0 5px;
-}
-
-/* Workspaces */
-#workspaces * {
-	font-size: 12px;
-}
-
-#workspaces button {
-	color: @surface2;
-	transition: color 0.2s ease-in-out;
-	border-radius: 10px;
-}
-
-#workspaces button:hover,
-#workspaces button.active {
-	color: @blue;
-	background: alpha(@crust, 0.6);
-}
 
 /* Modules */
 .modules-left,
@@ -65,4 +38,57 @@ window#waybar {
 	border-radius: 10px;
 	padding: 8px;
 	background: alpha(@crust, 0.6);
+}
+
+/* Default margin/padding for modules */
+#bluetooth,
+#temperature,
+#network,
+#cpu,
+#memory,
+#pulseaudio,
+#battery,
+#clock,
+#workspaces {
+	padding: 0 5px;
+}
+
+/* Workspaces */
+#workspaces button {
+	all: unset;
+	padding: 0px 5px;
+	color: alpha(@blue, .4);
+	transition: all .2s ease;
+}
+
+#workspaces button:hover {
+	color: rgba(0, 0, 0, 0);
+	border: none;
+	text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
+	transition: all 1s ease;
+}
+
+#workspaces button.active {
+	color: @blue;
+	border: none;
+	text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+}
+
+#workspaces button.empty {
+	color: rgba(0, 0, 0, 0);
+	border: none;
+	text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
+}
+
+#workspaces button.empty:hover {
+	color: rgba(0, 0, 0, 0);
+	border: none;
+	text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
+	transition: all 1s ease;
+}
+
+#workspaces button.empty.active {
+	color: @blue;
+	border: none;
+	text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
 }
