@@ -259,3 +259,21 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 -- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 --
 -- No window or workspace rules were active in the legacy config; add them here.
+
+-- Chrome's document Picture-in-Picture window (the Google Meet mini-window that
+-- pops up when you switch tabs during a call). It arrives already floating but
+-- huge and unpinned, so shrink it, park it bottom-right and keep it on top of
+-- every workspace.
+--
+-- Matching: real browser windows always end their title in " - Google Chrome",
+-- the PiP window never does, so a negative title match excludes them all no
+-- matter which tab is active. initial_title then narrows it to Meet popups.
+hl.window_rule({
+    name  = "chrome-pip",
+    match = { class         = "^(google-chrome|chromium|brave-browser)$",
+              title         = "negative:.* - Google Chrome$",
+              initial_title = "^Meet - .*" },
+    pin   = true,
+    size  = "400 240",
+    move  = "monitor_w-420 monitor_h-350",
+})
